@@ -1,0 +1,882 @@
+/******* Général **************************************************************************************************************************/
+
+/******* Police d'écriture du site (+ taille...) *******/
+
+* {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/******* Couleurs utilisées dans le site *******/
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+/******* Couleur des icones du site *******/
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+/******* Comportement du body ; Version Desktop (max-width de 1440px) *******/
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+}
+
+/******* Pour les titres h1 et h2 *******/
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+/******* Pour les titres h4 *******/
+
+.small-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+/******* Au sujet des cards (cartes) *******/
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    padding: 5px;
+    text-decoration: none;
+    color:  black;
+}
+
+/*** Comportement des images dans les cartes ***/
+
+.card img {
+    object-fit: cover;
+}
+
+/*** Titre des cartes (h3) ***/
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+/*** Sous-titres des cartes ***/
+
+.card-subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/******* Notations (étoiles) des cartes *******/
+
+.card-rating {
+    margin: 0;
+}
+
+.neutral-star {
+    color: var(--main-bg-color);
+}
+
+/******* Concernant le symbole "euro" *******/
+
+.euro {
+    font-weight: 700;
+}
+
+
+/******* Header ****************************************************************************************************************************/
+
+.header-container {
+    width: 100%;
+    height: 79px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/******* Concernant le logo "Booki" de la Headline *******/
+
+.logo-booki {
+    width: 61px;
+    height: 19px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/******* Au sujet de la barre de navigation (lien, comportement...) de la Headline *******/
+
+.header-container a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding-top: 18px;
+    padding-bottom: 0px;
+    border-top: 2px var(--main-color) transparent;
+}
+
+.header-container li {
+    list-style-type: none;
+}
+
+.a-activites {
+    margin-left: 30px;
+}
+
+.header-container ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.header-container a:hover {
+    border-top: solid 2px var(--main-color);
+    color: var(--main-color);
+    padding-top: 16px;
+}
+
+
+/******* info-group *************************************************************************************************************************/
+
+.info-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+}
+
+
+/******* Headline ***************************************************************************************************************************/
+
+.Headline {
+    height: 50px;
+}
+
+.Headline, .section-title {
+    margin: 0px;
+}
+
+.Haedline, p {
+    margin-top: 5px;
+}
+
+
+/******* Search-Bar with Form (barre de recherche et formulaire) *****************************************************************************/
+
+.Search-Bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    height: 49px;
+}
+
+
+.fa-location-dot {
+    width: 50px;
+    height: 49px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid var(--main-bg-color);
+    background: var(--main-bg-color);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: black;
+}
+
+.button-city {
+    height: 49px;
+    width: 195px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 0px;
+    margin: 0px;
+    border: solid var(--main-bg-color) 1px;
+    text-align: center;
+}
+
+.button-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 132px;
+    height: 49px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    color: var(--main-bg-color);
+    background: var(--main-color);
+    border: solid var(--main-color);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+
+/******* Icône "loupe" qui apparait en format écran mobile *******/
+
+.fa-magnifying-glass {
+    visibility: hidden;
+}
+
+
+/******* FilterBar (Barre des filtres) **************************************************************************************************/
+
+.FilterBar, .all-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+/******* Concernant les icônes *******/
+
+.FilterBar .fa-solid {
+    width: 22px;
+    height: 18px;
+}
+
+/******* Concernant les 4 filtres *******/
+
+.filtres {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 17px;
+    margin: 0px;
+    gap: 10px;
+    border: solid var(--filter-bg-color) 2px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.filter-size {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0px;
+}
+
+/******* Effet sur les filtres au passage de la souris *******/
+
+.filtres:hover {
+    background: var(--filter-bg-color);
+}
+
+
+/******* Infobar (Barre d'information) ******************************************************************************************************/
+
+.Infobar {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 10px;
+}
+
+/******* Concernant l'icône *******/
+
+.fa-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    border: solid #d9d9d9 1px;
+    border-radius: 50px;
+}
+
+
+/******* Section groupe : Hébergements + Populaires **************************************************************************************/
+
+.hebergements-and-populaires {
+    height: 570px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hebergements, .populaires {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+}
+
+/******* Section  "Hébergements à Marseille" **********************************/
+
+.hebergements {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/******* Concernant le titre *******/
+
+.hebergements .section-title {
+    margin: 20px 0px 20px 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+/******* Au sujet des cartes *******/
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.hebergements-cards .card {
+    margin: 10px;
+    width: 28%;
+    height: 180px;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.hebergements-cards .card-content {
+    height: 35%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+    margin: 0px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0px;
+}
+
+/******* Lien "Afficher plus" *******/
+
+.hebergements a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-top: 30px;
+    margin-left: 20px;  
+    margin-right: auto;
+}
+
+
+/******* Section "Les plus populaires" **************************************************/
+
+.populaires {
+    width: 32%;
+    height: 100%;
+}
+
+/******* Concernant le titre *******/
+
+.populaires .populaires-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 20px 30px 20px;
+    width: 90%;
+}
+
+/******* Concernant l'icône *******/
+
+.fa-chart-line {
+    margin-left: 50px;
+}
+
+/******* Au sujet des cartes *******/
+
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    width: 85%;
+    height: 130px;
+}
+
+.populaires-cards img {
+    height: 100%;
+    width: 40%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.populaires-cards .card-content {
+    width: 50%;
+    height: 100%;
+    padding: 0px 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+/******* Concernant l'icône *******/
+
+.fa-chart-line {
+    cursor: pointer;
+}
+
+
+/******* Section "Activités à Marseille" ********************************************************************************************/
+
+
+.activites {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 5%;
+}
+
+/******* Concernant le titre *******/
+
+.activites .section-title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/******* Au sujet des cartes *******/
+
+.activites-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 85%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activites-cards .card {
+    width: 30%;
+    padding: 0px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.activites-cards .card-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    word-break: inherit;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+
+/******* Footer (liens vers plus d'informaions) **************************************************************************************************************************/
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: var(--main-bg-color);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-left: 20px;
+}
+
+/******* Concernant les tires de chaque liste *******/
+
+.footer-info .small-title {
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+/******* Concernant les listes et les liens *******/
+
+.footer-info li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.footer-info a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-info,
+ul {
+    padding: 0px;
+}
+
+
+/******* Media queries (Le code ci-dessous correspond à la version responsive uniquement) ******************************/
+
+/******* Medium devices (tablets, less/equal than 1024px) *************************************************************/
+
+@media (max-width: 1024px) {
+
+/* ****** Section Info-group ***************************/
+
+/******* Concernant les changements de la barre des filtres (positionnement) *******/
+
+    .FilterBar {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+ /******* Changements de positionnement de la section Hébergement et Populaires ************/
+
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+    }
+
+ /******* Changements pour la section "Hébergement à Marseille" *******/
+
+    .hebergements {
+        width: 100%;
+        height: 66%;
+    }
+
+    .hebergements-cards {
+        justify-content: space-evenly;
+    }
+
+    .hebergements-cards .card {
+        width: 28%;
+        height: 200px;
+    }
+    
+/******* Changements pour de la section  "Les plus populaires" *******/
+
+    .populaires {
+        width: 100%;
+        height: 28%;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .populaires-cards .card {
+        width: 28%;
+        height: 150px;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+/******* Changements pour de la section "Activités à Marseille" *******/
+
+    .activites-cards .card-title {
+        font-size: 14px;
+        margin: 0px;
+        padding: 10px;
+        line-height: 15px;
+    }
+
+}
+
+
+/******* Small devices (phones, less than 768px) *********************************************************************************************/
+
+@media (max-width: 767px) {
+
+/******* Changements sur le body  *******/
+
+    .main-container {
+        padding: 0px;
+    }  
+
+/******* Changements pour la section Info-Group *******/
+    
+    .info-group {
+        width: 100%;
+    }
+
+    .Headline, .small-title {
+        margin-left: 10px;
+    }
+
+/******* Changements pour la Headline (logo + barre de navigation) *******/
+
+    .Headline .section-title {
+        margin-bottom: 10px;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+    .logo-booki {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 20px;
+    }
+
+    .header-container nav {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .header-container li {
+        width: 50%;
+    }
+
+    .a-activites {
+        margin-left: 0px;
+    }
+
+    .header-container a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        border-bottom: solid var(--filter-bg-color);
+    }
+
+    .header-container a:hover {
+        color: var(--main-color);
+        border-top: transparent;
+        border-bottom: 2px solid var(--main-color);
+        padding-top: 18px;
+    }
+
+    .header-container {
+        width: 100%;
+        height: 115px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-container ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+/******* Changements concernant la barre de recherche *******/
+
+    .Search-Bar {
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .button-city {
+        width: 100%;
+    }
+
+/******* Remplacement du boutton recherche par l'icône de la loupe *******/
+
+    .button-search {
+        visibility: hidden;
+        display: none;
+    }
+
+    .fa-magnifying-glass {
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 0px;
+        margin-right: 20px;
+        width : 49px;
+        height: 49px;
+        background: var(--main-color);
+        border: 1px solid var(--main-color);
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+/******* Changements pour la barre des filtres*******/
+
+    .FilterBar {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .all-filters {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .filtres {
+        width: 30%;
+        white-space: nowrap;
+    }
+
+    .filter-size {
+        font-size: 11px;
+    }
+
+    .Infobar {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/******* Changement pour la section : Héberegement + Populaires *******************************/
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 2030px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .populaires-cards,
+    .hebergements-cards,
+    .activites-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+/******* Changements pour la section "Les plus populaires" *******/
+
+    .populaires {
+        height: 600px;
+        border-radius: 0px;
+    }
+
+    .populaires-cards .card {
+        width: 80%;
+        height: 120px;
+    }
+
+/******* Changements pour la section "Hébergement à Marseille" **********************************/
+
+    .hebergements {
+        height: 1500px;
+        margin-bottom: 20px;
+   }
+
+    .hebergements .card {
+        width: 80%;
+        height: 200px;
+    }
+
+/******* Changement de l'ordre de présentation des cartes *******/
+
+    .hebergements-cards .order1 {
+        order: 1;
+    }
+
+    .hebergements-cards .order2 {
+        order: 6;
+    }
+
+    .hebergements-cards .order3 {
+        order: 3;
+    }
+
+    .hebergements-cards .order4 {
+        order: 4;
+    }
+
+    .hebergements-cards .order5 {
+        order: 2;
+    }
+
+    .hebergements-cards .order6 {
+        order: 5;
+    }
+
+    .hebergements-cards .more {
+        order: 7;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        background: none;
+    }
+
+/******* Changements pour la section "Activités à Marseille" *******/
+
+    .activites-cards .card {
+        width: 80%;
+        height: 200px;
+    }
+
+    .activites-cards .card-title {
+        padding: 0px 0px 0px 5px;
+    }
+
+/******* Changements pour la section Footer *******/
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-info {
+        width: 100%;
+    }
+
+    .footer-info .small-title {
+        margin-left: 0px;
+    }
+}
